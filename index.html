@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Break out</title>
+    <title>Game with Ball</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="./main.js"></script>
 </head>
 <body>
-    <div class="wrap">
-        <h1>Break Out</h1>
+    <h1>Game with Ball</h1>
+
+    <!-- Главное меню -->
+    <div id="main-menu" class="active">
+        <button id="start-btn">Start</button>
     </div>
-    <canvas id="myCanvas" width="700" height="320"></canvas>
+
+    <!-- Игровой экран -->
+    <div id="game-container">
+        <div id="info-container">
+            <div id="score-container">Score: 0</div>
+            <div id="lives-container">Lives: 3</div>
+        </div>
+
+        <canvas id="myCanvas" width="700" height="400"></canvas>
+
+        <!-- Контейнер с кнопками под игрой -->
+        <div id="buttons-container">
+            <button id="restart-btn">Restart</button>
+            <button id="return-menu-btn">Return to Menu</button>
+        </div>
+
+        <!-- Сообщения игры (выигрыш, проигрыш, пауза) -->
+        <div id="game-message"></div>
+    </div>
 </body>
 </html>
